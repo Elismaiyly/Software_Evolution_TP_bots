@@ -27,7 +27,7 @@ def CreatingRepository(df_events, list_event_id_covered, df_all_activities):
         df_events
         [event_general+['ref_type']]
         .assign(activity='Creating repository')
-        .rename(columns={'login':'contributor',
+        .renam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e(columns={'login':'contributor',
                          'created_at':'date'})
         .assign(date=lambda d: d.date.dt.tz_localize(tz='UTC').map(lambda x: x.isoformat()))
         .drop_duplicates()
